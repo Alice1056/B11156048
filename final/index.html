@@ -11,71 +11,98 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
 
     <title>Document</title>
+    <style>
+        html,
+        body
+        {
+            height: 150%;
+        }
+        
+        body {
+            background-image: linear-gradient(to bottom, rgb(179, 18, 18), rgb(226, 156, 25),rgb(227, 200, 117), white);
+            background-repeat: no-repeat;
+        }
+
+        img{
+            width: 100%;
+            height: 685px;
+        }
+        .star-rail{
+            width: 100%;
+            margin-top: -1rem;
+            position: relative;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+        .characters{
+            position: absolute;
+            top: 1.57rem;
+            width: 16.778rem;
+            height: 10.56rem;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <nav class="navbar navbar-light bg-light mb-4">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.svg" width="80%" height="80%" class="d-inline-block align-top" alt="">
-                </a>
+            <nav class="navbar navbar-light bg-black justify-content-center">
                 <ul class="navbar-nav flex-row">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">首頁</a>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#">首頁</a>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">介紹</a>
+                    <li class="nav-item mx-4 ">
+                        <a class="nav-link text-light" href="#">介紹</a>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">劇情</a>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#">劇情</a>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">角色</a>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#">角色</a>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">關於我們</a>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#" >關於我們</a>
                     </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">聯絡我們</a>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link text-light" href="#" >聯絡我們</a>
                     </li>
                 </ul>
-                <div class="mb-3">
-                    <input type="text" class="form-control-sm" id="example" placeholder="Search">
-                    <button type="button" class="btn btn-outline-success">Search</button>
-                </div>
             </nav>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/back1.jpg">
+                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/back1.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/back2.jpg">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/back3.jpg">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="img/back2.jpg">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/back3.jpg">
-                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
-            </div>
         </header>
-        <article>
-            <div>
 
-            </div>
+        <article>
+            <br>
             <h2>介紹</h2>
             <p>
                 本作是真島浩在《聖石小子》後推出的長篇連載。官方續篇漫畫《FAIRY TAIL魔導少年 100 YEARS QUEST》
@@ -93,8 +120,9 @@
             <br>
             <hr>
             <h2>角色</h2>
-            <div class="content">
-                <div class="card" id="a1">
+            <div class="star-rail">
+                <div id="characters" class="characters">
+                    <div class="card" id="a1">
                     <p><b>第一格</b></p>
                     <p>first</p>
                 </div>
@@ -104,21 +132,8 @@
                 </div>
                 <div class="card">
                     <p><b>第三格</b></p>
-        <section>
-            <div class="content">
-                <div class="card" id="a1">
-                    <h2>第一格</h2>
-                    <p>first</p>
                 </div>
-                <div class="card">
-                    <h2>第二格</h2>
-                    <p>second</p>
                 </div>
-                <div class="card">
-                    <h2>第三格</h2>
-                    <p>third</p>
-                </div>
-            </div>
         </section>
 
         <footer></footer>
