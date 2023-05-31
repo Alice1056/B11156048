@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: rgb(253, 240, 240);
+        }
+        h2{
+            text-align: center;
+        }
         .container{
             margin: auto;
-            padding: 10px;
+            padding: 0px 10px 10px 10px;
         }
         .navbar{
             background-color: rgb(60, 56, 56);
@@ -21,10 +27,9 @@
             justify-content: center;
             list-style-type: none;
             margin: 10px;
-            
         }
         .navbar li {
-            margin: 0 20px ;
+            margin: 0 50px ;
         }
         .navbar a{
             float: left;
@@ -42,7 +47,14 @@
         }
         img{
             width: 100%;
-            height: 430px;
+            height: 700px;
+        }
+        .card{
+            border-bottom: 2px dashed;
+            margin: 5px;
+            text-align: left;
+            width: 600px;
+            padding: 10px;
         }
     </style>
 </head>
@@ -55,10 +67,13 @@
                         <a href="#">首頁</a>
                     </li>
                     <li>
-                        <a href="file:///C:/Users/User/OneDrive/%E6%A1%8C%E9%9D%A2/final/B11156048/final/%E8%A7%92%E8%89%B2.html" target="_parent">角色</a>
+                        <a href="#d1">介紹</a>
                     </li>
                     <li>
-                        <a href="#">魔法</a>
+                        <a href="#">劇情</a>
+                    </li>
+                    <li>
+                        <a href="#">角色</a>
                     </li>
                     <li>
                         <a href="#">關於我們</a>
@@ -74,9 +89,39 @@
             <div>
                 
             </div>
-            <h2>標題</h2>
-            <p>內容</p>
+            <h2>介紹</h2>
+            <p>
+                本作是真島浩在《聖石小子》後推出的長篇連載。官方續篇漫畫《FAIRY TAIL魔導少年 100 YEARS QUEST》
+                （フェアリーテイル 100年クエスト，FAIRY TAIL魔導少年 百年任務）由原作者真島浩負責劇本、分鏡，
+                上田敦夫作畫自2018年7月25日起在講談社旗下專屬APP開始連載至今，隔周周三更新1話，發展與宣傳見影響。
+                目前已出版9冊圖書（截止2021年7月），台灣中文版由東立出版社出版，譯者吳勵誠。<br>
+
+                <br>該漫畫系列最初由 Del Rey Manga 獲授權在北美發行英文版，於2008年3月開始發行，並於2010年9月以第12卷發行結束其授權。
+                2010年12月，講談社美國接管了該系列的北美發行。東南亞地區則由 Animax Asia 從2010年到2015年播出了七季動畫的英文版。
+                該漫畫還在英國由 Turnaround Publisher Services 獲授權，在澳大利亞由 Penguin Books Australia 獲授權。該動畫已獲得 
+                Funimation 的授權，可在北美發行英文版。截至2020年2月，FAIRY TAIL魔導少年印刷了7200萬冊。
+            </p>
         </article>
+        <section id="d1">
+            <br>
+            <hr>
+            <h2>角色</h2>
+            <div class="content">
+                <div class="card" id="a1">
+                    <p><b>第一格</b></p>
+                    <p>first</p>
+                </div>
+                <div class="card">
+                    <p><b>第二格</b></p>
+                    <p>second</p>
+                </div>
+                <div class="card">
+                    <p><b>第三格</b></p>
+                    <p>third</p>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
     </div>
 </body>
 </html>
