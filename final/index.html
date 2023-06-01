@@ -16,16 +16,16 @@
         body
         {
             height: 150%;
+            height: 200vh;
+            background-image: url(img/背景.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
         
-        body {
-            background-image: linear-gradient(to bottom, rgb(179, 18, 18), rgb(226, 156, 25),rgb(227, 200, 117), white);
-            background-repeat: no-repeat;
-        }
-
-        img{
-            width: 100%;
-            height: 685px;
+        h2{
+            text-align: center;
+            font-weight: bolder;
         }
         .star-rail{
             width: 100%;
@@ -49,7 +49,6 @@
 </head>
 
 <body>
-    <div class="container">
         <header>
             <nav class="navbar navbar-light bg-black justify-content-center">
                 <ul class="navbar-nav flex-row">
@@ -80,14 +79,14 @@
                         <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="img/back1.jpg">
+                        <div class="carousel-item active" style="background-color: rgba(19, 18, 18, 0.793);">
+                            <img style="height: 685px;" src="img/back1.jpg" class="mx-auto d-block">
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/back2.jpg">
+                        <div class="carousel-item" >
+                            <img style="width: 100%; height: 685px;" src="img/back2.jpg" >
                         </div>
-                        <div class="carousel-item">
-                            <img src="img/back3.jpg">
+                        <div class="carousel-item" style="background-color: rgba(19, 18, 18, 0.793);">
+                            <img style="width: 45%; height: 685px;" src="img/back3.jpg" class="mx-auto d-block">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -102,6 +101,7 @@
         </header>
 
         <article>
+            <div class="container">
             <br>
             <h2>介紹</h2>
             <p>
