@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 95%;
+            height: 90%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size: 24px;
+        }
+        span{
+            color: white;
+        }
+        #loading-screen .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            var loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 2000); // 3000毫秒 = 3秒
+        });
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        
+        <div class="spinner-border text-dark" role="status">
+            <img src="img/load.png" alt="Loading Image" style="width: 50px; height: 50px;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <section>
+        <h2>角色</h2>
+        <div class="star-rail">
+            <div id="characters" class="characters">
+                <div class="card" id="a1">
+                <p><b>第一格</b></p>
+                <p>first</p>
+            </div>
+            <div class="card">
+                <p><b>第二格</b></p>
+                <p>second</p>
+            </div>
+            <div class="card">
+                <p><b>第三格</b></p>
+            </div>
+            </div>
+    </section>
+</body>
+</html>
