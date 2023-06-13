@@ -5,18 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         html,
         body
         {
-            height: 200%;
-            height: 150vh;
+            height: 250vh;
             background-image: url(img/背景.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -31,29 +29,47 @@
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
         }
-        .star-rail{
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            margin-top: -1rem;
-            position: relative;
-            display: -webkit-box;
+            height: 100%;
+            background-color: #fff;
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            flex-direction: column;
-            -webkit-box-align: center;
+            justify-content: center;
             align-items: center;
-        }
-        .characters{
-            position: absolute;
-            top: 1.57rem;
-            width: 16.778rem;
-            height: 10.56rem;
+            z-index: 9999;
         }
 
+        #loading-screen img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+        }
     </style>
+    <script>
+        window.addEventListener('load', function() {
+            var loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.style.display = 'none';
+            }, 1000); // 1000毫秒 = 1秒
+        });
+
+    </script>
 </head>
 
 <body>
+    <div id="loading-screen">
+        <img src="img/load.png" alt="Loading Image">
+        <div class="spinner-border text-dark" style="width: 5rem; height: 5rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
         <header>
             <nav class="navbar navbar-dark bg-black justify-content-start">
                 <span class="navbar-brand" href="#">
@@ -61,13 +77,13 @@
                 </span>
                 <ul class="navbar-nav flex-row">
                     <li class="nav-item mx-4">
-                        <a class="nav-link text-light" href="#">首頁</a>
+                        <a class="nav-link text-light" href="index.html">首頁</a>
                     </li>
                     <li class="nav-item mx-4 ">
                         <a class="nav-link text-light" href="#d1">介紹</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link text-light" href="#">劇情</a>
+                        <a class="nav-link text-light" href="#d2">劇情</a>
                     </li>
                     <li class="nav-item mx-4">
                         <a class="nav-link text-light" href="角色.html">角色</a>
@@ -94,7 +110,7 @@
                             <img style=" height: 685px;" src="img/back1.jpg" class="mx-auto d-block">
                         </div>
                         <div class="carousel-item" style="background-color: rgba(19, 18, 18, 0.793);">
-                            <img style=" height: 685px;" src="img/back5.jpg.crdownload" class="mx-auto d-block">
+                            <img style=" height: 685px;" src="img/back5.png" class="mx-auto d-block">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -107,23 +123,44 @@
                     </a>
                 </div>
         </header>
-
+<div class="container">
         <article>
-            <div class="container" id="d1">
-            <br>
-            <h2>介紹</h2>
-            <p>
-                本作是真島浩在《聖石小子》後推出的長篇連載。官方續篇漫畫《FAIRY TAIL魔導少年 100 YEARS QUEST》
-                （フェアリーテイル 100年クエスト，FAIRY TAIL魔導少年 百年任務）由原作者真島浩負責劇本、分鏡，
-                上田敦夫作畫自2018年7月25日起在講談社旗下專屬APP開始連載至今，隔周周三更新1話，發展與宣傳見影響。
-                目前已出版9冊圖書（截止2021年7月），台灣中文版由東立出版社出版，譯者吳勵誠。<br>
+            <div id="d1">
+                <br>
+                <h2>介紹</h2>
+                <p>
+                    本作是真島浩在《聖石小子》後推出的長篇連載。官方續篇漫畫《FAIRY TAIL魔導少年 100 YEARS QUEST》
+                    （フェアリーテイル 100年クエスト，FAIRY TAIL魔導少年 百年任務）由原作者真島浩負責劇本、分鏡，
+                    上田敦夫作畫自2018年7月25日起在講談社旗下專屬APP開始連載至今，隔周周三更新1話，發展與宣傳見影響。
+                    目前已出版9冊圖書（截止2021年7月），台灣中文版由東立出版社出版，譯者吳勵誠。<br>
 
-                <br>該漫畫系列最初由 Del Rey Manga 獲授權在北美發行英文版，於2008年3月開始發行，並於2010年9月以第12卷發行結束其授權。
-                2010年12月，講談社美國接管了該系列的北美發行。東南亞地區則由 Animax Asia 從2010年到2015年播出了七季動畫的英文版。
-                該漫畫還在英國由 Turnaround Publisher Services 獲授權，在澳大利亞由 Penguin Books Australia 獲授權。該動畫已獲得 
-                Funimation 的授權，可在北美發行英文版。截至2020年2月，FAIRY TAIL魔導少年印刷了7200萬冊。
-            </p>
+                    <br>該漫畫系列最初由 Del Rey Manga 獲授權在北美發行英文版，於2008年3月開始發行，並於2010年9月以第12卷發行結束其授權。
+                    2010年12月，講談社美國接管了該系列的北美發行。東南亞地區則由 Animax Asia 從2010年到2015年播出了七季動畫的英文版。
+                    該漫畫還在英國由 Turnaround Publisher Services 獲授權，在澳大利亞由 Penguin Books Australia 獲授權。該動畫已獲得 
+                    Funimation 的授權，可在北美發行英文版。截至2020年2月，FAIRY TAIL魔導少年印刷了7200萬冊。
+                </p>
+            </div>
         </article>
+        <br>
+        <hr>
+        <section>
+            <div id="d2">
+                <h2>劇情</h2>
+                <p>
+                    一個充滿魔法的世界亞斯藍德(Earth Land)中，那裡有很多給魔導士們介紹工作中介等的組合組織——魔導士公會，位於菲歐烈王國的一個眾多厲害魔導士雲集的魔導士公會妖精尾巴（Fairy Tail），
+                    一位星靈魔導士少女露西·哈特菲利亞非常希望能加入妖精尾巴。<br>
+
+                    <br>她在一位滅龍魔導士少年納茲‧多拉格尼爾和哈比的引導下，終於如露西所願進入妖精尾巴並結識許多厲害又出色的魔導士們，
+                    因此露西跟納茲與哈比隨著妖精尾巴的同伴格雷、艾爾莎、溫蒂、夏璐璐和公會的夥伴們一起做任務展開一連串的冒險旅程。
+                </p>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <section>
+            <h2>角色</h2>
+            <a href="角色.html#t1"><img src="img/partb1.jpg"></a>
+        </section>
     </div>
 </body>
 
