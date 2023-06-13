@@ -33,6 +33,19 @@
             height: 50px;
             z-index: 1;
         }
+
+        .image-text-container {
+            overflow: hidden;
+        }
+
+        .left-image {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .text-container {
+            overflow: hidden;
+        }
     </style>
     <script>
         window.addEventListener('load', function() {
@@ -64,7 +77,7 @@
                     <a class="nav-link text-light" href="index.html#d1">介紹</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#">劇情</a>
+                    <a class="nav-link text-light" href="index.html#d2">劇情</a>
                 </li>
                 <li class="nav-item mx-4">
                     <a class="nav-link text-light" href="角色.html">角色</a>
@@ -78,5 +91,14 @@
             </ul>
         </nav>
     </header>
+    <section>
+        <div class="image-text-container">
+            <img src="img/image.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

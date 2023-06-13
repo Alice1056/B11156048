@@ -14,7 +14,7 @@
         html,
         body
         {
-            height: 250vh;
+            height: 400vh;
             background-image: url(img/背景.jpg);
             background-repeat: no-repeat;
             background-size: cover;
@@ -29,6 +29,7 @@
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
         }
+
         #loading-screen {
             position: fixed;
             top: 0;
@@ -51,6 +52,29 @@
             height: 50px;
             z-index: 1;
         }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container img{
+            width: 250px;
+            height: 400px;
+        }
+
+        .bright-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .image-container:hover .bright-image {
+            opacity: 1;
+        }
+
     </style>
     <script>
         window.addEventListener('load', function() {
@@ -60,6 +84,7 @@
             }, 1000); // 1000毫秒 = 1秒
         });
 
+        
     </script>
 </head>
 
@@ -89,10 +114,10 @@
                         <a class="nav-link text-light" href="角色.html">角色</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link text-light" href="#" >關於我們</a>
+                        <a class="nav-link text-light" href="#" >電影</a>
                     </li>
                     <li class="nav-item mx-4">
-                        <a class="nav-link text-light" href="#" >聯絡我們</a>
+                        <a class="nav-link text-light" href="#" >關於我們</a>
                     </li>
                 </ul>
             </nav>
@@ -159,7 +184,73 @@
         <hr>
         <section>
             <h2>角色</h2>
-            <a href="角色.html#t1"><img src="img/partb1.jpg"></a>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb1.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part1.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb2.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part2.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb3.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part3.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb4.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part4.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb5.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part5.jpg" alt="Bright Image">
+                </a>
+            </div>
+            
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb6.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part6.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb7.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part7.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb8.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part8.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb9.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part9.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb610.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part10.jpg" alt="Bright Image">
+                </a>
+            </div>
+            <div class="image-container">
+                <a href="角色.html">
+                    <img class="dark-image" src="img/partb11.jpg" alt="Dark Image">
+                    <img class="bright-image" src="img/part11.jpg" alt="Bright Image">
+                </a>
+            </div>
         </section>
     </div>
 </body>
