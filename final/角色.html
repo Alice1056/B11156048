@@ -36,6 +36,12 @@
 
         .image-text-container {
             overflow: hidden;
+            margin-bottom: 10%;
+        }
+
+        .image-text-container img{
+            width: 250px;
+            height: 400px;
         }
 
         .left-image {
@@ -45,6 +51,11 @@
 
         .text-container {
             overflow: hidden;
+            margin-top: 10%;
+        }
+        section{
+            margin-right:15%;
+            margin-left: 15%;
         }
     </style>
     <script>
@@ -55,6 +66,22 @@
             }, 1000); // 1000毫秒 = 1秒
         });
 
+        const links = document.querySelectorAll('a');
+        const contents = document.querySelectorAll('.content');
+
+        links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetContent = document.querySelector(targetId);
+
+            contents.forEach((content) => {
+            content.classList.remove('active');
+            });
+
+            targetContent.classList.add('active');
+        });
+        });
     </script>
 </head>
 <body>
@@ -83,19 +110,82 @@
                     <a class="nav-link text-light" href="角色.html">角色</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#" >關於我們</a>
+                    <a class="nav-link text-light" href="#" >電影</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#" >聯絡我們</a>
+                    <a class="nav-link text-light" href="#" >關於我們</a>
                 </li>
             </ul>
         </nav>
     </header>
     <section>
-        <div class="image-text-container">
-            <img src="img/image.jpg" alt="Image" class="left-image">
+        <div class="image-text-container" id="p1">
+            <img src="img/part1.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>Title</h2>
+                <h2>納茲</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p2">
+            <img src="img/part2.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>露西</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p3">
+            <img src="img/part3.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>格雷</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p4">
+            <img src="img/part4.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>艾爾莎</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p5">
+            <img src="img/part5.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>溫蒂</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p6">
+            <img src="img/part6.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>哥吉爾</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p7">
+            <img src="img/part7.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>朱比亞</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p8">
+            <img src="img/part8.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>露西</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p9">
+            <img src="img/part9.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>露西</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p11">
+            <img src="img/part11.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>露西</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
             </div>
         </div>
