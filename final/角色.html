@@ -42,6 +42,7 @@
         .image-text-container img{
             width: 250px;
             height: 400px;
+            
         }
 
         .left-image {
@@ -51,8 +52,17 @@
 
         .text-container {
             overflow: hidden;
-            margin-top: 10%;
+            margin-bottom: 10%;
+            margin-top: 5%;
+            font-family:Arial, Helvetica, sans-serif;
         }
+
+        .text-container p {
+            text-align: justify;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
         section{
             margin-right:15%;
             margin-left: 15%;
@@ -66,22 +76,6 @@
             }, 1000); // 1000毫秒 = 1秒
         });
 
-        const links = document.querySelectorAll('a');
-        const contents = document.querySelectorAll('.content');
-
-        links.forEach((link) => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetContent = document.querySelector(targetId);
-
-            contents.forEach((content) => {
-            content.classList.remove('active');
-            });
-
-            targetContent.classList.add('active');
-        });
-        });
     </script>
 </head>
 <body>
@@ -110,10 +104,7 @@
                     <a class="nav-link text-light" href="角色.html">角色</a>
                 </li>
                 <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#" >電影</a>
-                </li>
-                <li class="nav-item mx-4">
-                    <a class="nav-link text-light" href="#" >關於我們</a>
+                    <a class="nav-link text-light" href="電影.html" >電影</a>
                 </li>
             </ul>
         </nav>
@@ -122,71 +113,138 @@
         <div class="image-text-container" id="p1">
             <img src="img/part1.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>納茲</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>納茲·多拉格尼爾（ナツ・ドラグニル）</h2>
+                <br>
+                <p>
+                    本作第一男主角，妖精尾巴公會成員，火之滅龍魔導士，使用攻擊性強的滅龍魔法「火」，外號「火龍」。公會紋章在右肩上，顏色為鮮紅色。名字在日文的意思是「夏天」。
+                    <br>外貌特徵是櫻花色的刺刺短頭髮，服裝大多是穿黑色短外掛配束褲和涼鞋，左腕上套著一個黑色護腕。偶爾會換上其他服裝，總是圍著有鱗片般花紋的圍巾（非常珍視），脫下圍巾後在脖子的右方有一條疤痕。
+                    <br>性格非常直率、毫無心機又有點脫線。
+                    <br>戰鬥直覺方面很強，有時也會在戰鬥中展現機智的一面，而納茲的嗅覺也意外相當靈敏。
+                    最大弱點是對交通工具沒轍，乘坐時會嚴重暈車到無法做任何事情。
+                </p>
             </div>
         </div>
         <div class="image-text-container" id="p2">
             <img src="img/part2.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>露西</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>露西·哈特菲利亞（ルーシィ・ハートフィリア）</h2>
+                <br>
+                <p>
+                    本作第一女主角，妖精尾巴公會成員，公會紋章在右手背上，為星靈魔導士，使用星靈魔法。
+                    <br>外貌甜美，留著金色中長髮（公會解散一年後長至腰部），基本上都是短袖或無袖上衣搭配短裙或短褲，並配戴著紅色愛心形狀的耳環（偶爾會戴金色星形耳環）。
+                    <br>腰上有著妖精的尾巴的圖騰的小包，放有星靈鑰匙，且繫著戰鬥用的鞭子，在伊多拉斯篇後半段便開始使用波江座星靈之鞭——星河之鞭。
+                    <br>性格開朗且堅忍，溫柔細心且擁有耀眼的笑容，是個難得的高知性魔導士，在眾人陷入困境時，總能在關鍵時刻找出方法解救大家。
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p10">
+            <img src="img/part10.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>哈比（ハッピー）</h2>
+                <br>
+                <br>
+                <p>
+                    翼之魔導士，天生就能飛也會說人話藍色毛皮的小貓，眼睛無高光漆黑，口頭禪是「哎」，納茲的夥伴。
+                    <br>背上常常背著一個綠色包袱，裡面裝的都是魚（戰鬥時作「魚錘」使用），但戰鬥能力低。
+                    <br>常常在戰鬥時刻能夠用翼之魔法幫助納茲追趕敵人或是進行空中戰。也能在戰鬥中給與納茲一些建議。
+                </p>
             </div>
         </div>
         <div class="image-text-container" id="p3">
             <img src="img/part3.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>格雷</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>格雷·佛爾帕斯塔（グレイ・フルバスター）</h2>
+                <br>
+                <p>
+                    本作第二男主角，職業為冰之造型魔導士、冰之滅惡魔導士（漫畫第394話開始），與納茲是冤家對頭。
+                    <br>有著黑色頭髮和灰色眼眸的英俊少年[17]。服裝多為長袖衣褲加長外套。因為修練造冰魔法時養成了裸身習慣。
+                    <br>在戰鬥中經常能保持冷靜並做出機智的判斷，配合精湛的魔法技術來戰勝敵人而非像納茲那樣靠蠻力猛攻。由於修練的是造型魔法，因此想像力跟創造力都很優秀。
+                </p>
             </div>
         </div>
         <div class="image-text-container" id="p4">
             <img src="img/part4.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>艾爾莎</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>艾爾莎·史卡雷特（エルザ・スカーレット）</h2>
+                <br>
+                <p>
+                    本作第二女主角。公會裡的S級魔導士，職業為鎧甲之換裝魔導士，堪稱妖精尾巴中最強的女魔導士而被譽為「妖精女王」。
+                    <br>她是妖精尾巴公會裡除會長外最得人心的魔導士，在關鍵時刻大家都會聽她的。是一個勇敢、嚴謹又可靠的領導者。戰鬥中那超乎常人的敏銳、鬥誌及信念，讓她遇強越強。
+                    <br>裝扮就是那套左胸上有紅色公會紋章的盔甲，上半身從脖子以下防禦滴水不漏。再搭配一件藍色短裙和長靴。髮型則是原有的緋紅色長髮。
+                    <br>性格非常正經且一絲不苟，是嚴以律己的標準模範。
+                </p>
             </div>
         </div>
         <div class="image-text-container" id="p5">
             <img src="img/part5.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>溫蒂</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
-            </div>
-        </div>
-        <div class="image-text-container" id="p6">
-            <img src="img/part6.jpg" alt="Image" class="left-image">
-            <div class="text-container">
-                <h2>哥吉爾</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
-            </div>
-        </div>
-        <div class="image-text-container" id="p7">
-            <img src="img/part7.jpg" alt="Image" class="left-image">
-            <div class="text-container">
-                <h2>朱比亞</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
-            </div>
-        </div>
-        <div class="image-text-container" id="p8">
-            <img src="img/part8.jpg" alt="Image" class="left-image">
-            <div class="text-container">
-                <h2>露西</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>溫蒂·馬貝爾（ウェンディ·マーベル）</h2>
+                <br>
+                <p>
+                    本作第三女主角。天空之滅龍魔導士，魔力來源為「空氣」，被稱為「天空的巫女」，擅長的是治癒類魔法的後援，但無法治癒自己。
+                    <br>性格內向，溫柔，單純天真，是個有著深藍色長髮的可愛小女孩，被公會成員所愛戴，公會紋章在右肩。
+                </p>
             </div>
         </div>
         <div class="image-text-container" id="p9">
             <img src="img/part9.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>露西</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>夏璐璐（シャルル）</h2>
+                <br>
+                <br>
+                <p>
+                    為翼之魔導士，使用翼之魔法，此外擁有預知能力。公會紋章在背上，溫蒂的夥伴，自稱是溫蒂的監護人。
+                    <br>天生就能飛也會說人話。性格高傲，不易接近。外貌以超越者來說相當美麗，毛色為白色，尾巴上綁著蝴蝶結。
+                    <br>後面劇情她學會變成人型的變身魔法。
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p6">
+            <img src="img/part6.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>戈吉爾·雷德福克斯（ガジル・レッドフォックス）</h2>
+                <br>
+                <p>
+                    妖精尾巴的魔導士，左肩印有黑色的公會紋章，鐵之滅龍魔導士，被稱為「鐵龍」，能將身體各部變成各種各樣的鐵的武器或工具，全身覆蓋鋼鐵的鱗片使攻擊力和防禦力倍增攻防一體優秀魔法，對水中毒素和魔障粒子侵襲有一定耐性，受熱可以熔化。
+                    <br>外觀是向脊背伸長的程度的粗放黑頭髮加上面上眉、鼻子、嘴有若干顆螺釘，戴耳環強化面部特徵的野性青年。
+                    <br>他的興趣愛好是音樂，偶爾會一手拿著吉他，身著白色西裝在所有成員面前演奏自己創作的曲子，但成員們對他的評價卻很差。
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p8">
+            <img src="img/part8.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>龐沙·利利（パンサー・リリー）</h2>
+                <br>
+                <br>
+                <p>
+                    妖精尾巴的魔導士，背後印有淺灰色的公會紋章，使用翼魔法及戰鬥模式轉移魔法，他非常害怕雷聲。。
+                    <br>屬於艾克希特種族，來自於伊多拉斯的艾克斯達利亞，但有別於一般超越者，身形高大壯碩，亦非常驍勇善戰，戰力足以跟艾爾莎匹敵。
+                    <br>但來到亞斯藍德後大部分的時間都會縮小成一般超越者的大小。
+                </p>
+            </div>
+        </div>
+        <div class="image-text-container" id="p7">
+            <img src="img/part7.jpg" alt="Image" class="left-image">
+            <div class="text-container">
+                <h2>茱比亞·洛克沙（ジュビア・ロクサー）</h2>
+                <br>
+                <p>
+                    妖精尾巴的魔導士，使用「水流」魔法，精熟水系的各式魔法，能將自己的身體化為水進行攻擊和物理防禦。有「大海的茱比亞」的稱號，左大腿外側上有藍色的公會紋章。喜歡的東西是格雷大人。
+                    <br>外表特徵是白皙的皮膚和藍色的頭髮，藍色瞳孔吊眼角和長眼睫毛。
+                </p>
             </div>
         </div>
         <div class="image-text-container" id="p11">
             <img src="img/part11.jpg" alt="Image" class="left-image">
             <div class="text-container">
-                <h2>露西</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor nunc vel odio tempor, a lobortis mi feugiat. Nunc vitae nibh ut nunc pulvinar ultricies et eu sem. Vestibulum cursus, nisi id tempor laoreet, enim velit aliquet est, sit amet scelerisque urna dolor ac nunc.</p>
+                <h2>拉格薩斯·德雷亞（ラクサス・ドレアー）</h2>
+                <br>
+                <p>
+                    妖精尾巴的S級魔導士兼最強候補之一，外表帥氣，雷神眾的領導者，被喻為是在妖精尾巴中，僅次於馬卡羅夫和吉爾達茲的魔導士。並且是會長馬卡羅夫的孫子，深受公會夥伴愛戴。
+                    <br>雷之滅龍魔導士，能使用各種雷系魔法，搭交通工具會出現暈的毛病。
+                    <br>臉上有雷電形狀傷痕，肌肉發達，左胸有公會紋章和黑色紋身的黃色短髮青年。個人十分喜歡戴著耳機聽音樂，特別是加入搖滾風格的古典音樂。
+                    <br>以前性格好強，喜歡正面對決，不擅長與他人交流，所以常常一人行事，到後面劇情性格也較以往沉穩。
             </div>
         </div>
     </section>
