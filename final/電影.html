@@ -15,7 +15,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #fff;
+            background-color: #fbe4e4;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -42,7 +42,7 @@
         left: -800px;
         transition: left 2s ease;
         margin-top: 10%;
-        margin-left: 5%;
+        margin-left: 10%;
         margin-right: 10%;
     }
 
@@ -55,8 +55,8 @@
         position: absolute;
         opacity: 0;
         transition: opacity 2s ease;
-        margin-left: 45%;
-        margin-right: 20%;
+        margin-left: 50%;
+        margin-right: 10%;
         margin-top: 15%;
         text-align: justify;
         font-size: 24px;
@@ -72,7 +72,7 @@
         left: -1000px;
         transition: left 2s ease;
         margin-top: 45%;
-        margin-left: 5%;
+        margin-left: 10%;
         margin-right: 10%;
     }
 
@@ -85,18 +85,75 @@
         position: absolute;
         opacity: 0;
         transition: opacity 2s ease;
-        margin-left: 45%;
-        margin-right: 20%;
+        margin-left: 50%;
+        margin-right: 10%;
         margin-top: 50%;
         text-align: justify;
         font-size: 24px;
     }
 
     .image-style img{
-            width: 35px;
-            height: 35px; 
-            justify-content:end;
+        width: 35px;
+        height: 35px; 
+        justify-content:end;
+    }   
+
+    @media (max-width: 480px) {
+    /* 手機介面樣式 */
+    #loading-screen {
+        display: none;
+    }
+
+    #container1 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #image-container1 {
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #image1 {
+        width: 100%;
+        height: auto;
+    }
+
+    #text-container1 {
+        position: static;
+        opacity: 1;
+        margin: 20px;
+    }
+
+    #container2 {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    #image-container2 {
+        position: static;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #image2 {
+        width: 100%;
+        height: auto;
+    }
+
+    #text-container2 {
+        position: static;
+        opacity: 1;
+        margin: 20px;
+    }
+    .image-style img{
+            width: 20px;
+            height: 20px; 
+            margin-right: auto;
         }
+}
+
 </style>
 
     <script>
@@ -117,11 +174,11 @@
         </div>
     </div>
     <header>
-        <nav class="navbar navbar-dark bg-black justify-content-start">
+        <nav class="navbar navbar-dark bg-black ">
             <span class="navbar-brand" href="#">
                 <img src="img/LOGO.png" width="50px" height="50px" class="d-inline-block align-top" alt="">
             </span>
-            <ul class="navbar-nav flex-row">
+            <ul class="navbar-nav flex-row justify-content-start">
                 <li class="nav-item mx-4">
                     <a class="nav-link text-light" href="index.html">首頁</a>
                 </li>
@@ -155,7 +212,6 @@
                 <p id="text1"></p>
             </div>
         </div>
-        
         <div id="container2" class="container">
             <div class="image-container" id="image-container2">
                 <img id="image2" src="img/back4.jpg" alt="Image">

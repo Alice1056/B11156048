@@ -17,7 +17,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #fff;
+            background-color: #fbe4e4;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -73,6 +73,42 @@
             height: 35px; 
             justify-content:end;
         }
+
+        @media only screen and (max-width: 480px) {
+        
+        .image-text-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left-image {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 10px;
+            margin-left: 15%;
+        }
+
+        .text-container {
+            margin-top: 0;
+        }
+
+        .text-container p {
+            font-size: 14px;
+        }
+
+        section {
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+
+        .image-style img{
+            width: 20px;
+            height: 20px; 
+            margin-left: auto;
+        }
+
+    }
+
     </style>
     <script>
         window.addEventListener('load', function() {
@@ -92,11 +128,11 @@
         </div>
     </div>
     <header>
-        <nav class="navbar navbar-dark bg-black justify-content-start">
+        <nav class="navbar navbar-dark bg-black ">
             <span class="navbar-brand" href="#">
                 <img src="img/LOGO.png" width="50px" height="50px" class="d-inline-block align-top" alt="">
             </span>
-            <ul class="navbar-nav flex-row">
+            <ul class="navbar-nav flex-row justify-content-start">
                 <li class="nav-item mx-4">
                     <a class="nav-link text-light" href="index.html">首頁</a>
                 </li>
@@ -154,7 +190,6 @@
             <div class="text-container">
                 <h2>哈比（ハッピー）</h2>
                 <br>
-                <br>
                 <p>
                     翼之魔導士，天生就能飛也會說人話藍色毛皮的小貓，眼睛無高光漆黑，口頭禪是「哎」，納茲的夥伴。
                     <br>背上常常背著一個綠色包袱，裡面裝的都是魚（戰鬥時作「魚錘」使用），但戰鬥能力低。
@@ -203,7 +238,6 @@
             <div class="text-container">
                 <h2>夏璐璐（シャルル）</h2>
                 <br>
-                <br>
                 <p>
                     為翼之魔導士，使用翼之魔法，此外擁有預知能力。公會紋章在背上，溫蒂的夥伴，自稱是溫蒂的監護人。
                     <br>天生就能飛也會說人話。性格高傲，不易接近。外貌以超越者來說相當美麗，毛色為白色，尾巴上綁著蝴蝶結。
@@ -227,7 +261,6 @@
             <img src="img/part8.jpg" alt="Image" class="left-image">
             <div class="text-container">
                 <h2>龐沙·利利（パンサー・リリー）</h2>
-                <br>
                 <br>
                 <p>
                     妖精尾巴的魔導士，背後印有淺灰色的公會紋章，使用翼魔法及戰鬥模式轉移魔法，他非常害怕雷聲。。
